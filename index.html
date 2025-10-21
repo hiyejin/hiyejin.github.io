@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 웹페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>환영합니다!</h1>
+            <p class="subtitle">간단한 인터랙티브 웹페이지</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>카운터</h2>
+                <div class="counter-display" id="counter">0</div>
+                <div class="button-group">
+                    <button onclick="decrementCounter()" class="btn btn-secondary">-</button>
+                    <button onclick="resetCounter()" class="btn btn-secondary">초기화</button>
+                    <button onclick="incrementCounter()" class="btn btn-primary">+</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>배경색 변경</h2>
+                <div class="button-group">
+                    <button onclick="changeColor('lightblue')" class="btn color-btn" style="background-color: lightblue;">파랑</button>
+                    <button onclick="changeColor('lightcoral')" class="btn color-btn" style="background-color: lightcoral;">빨강</button>
+                    <button onclick="changeColor('lightgreen')" class="btn color-btn" style="background-color: lightgreen;">초록</button>
+                    <button onclick="changeColor('lightyellow')" class="btn color-btn" style="background-color: lightyellow;">노랑</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>간단한 할 일 목록</h2>
+                <div class="todo-input">
+                    <input type="text" id="todoInput" placeholder="할 일을 입력하세요" onkeypress="handleKeyPress(event)">
+                    <button onclick="addTodo()" class="btn btn-primary">추가</button>
+                </div>
+                <ul id="todoList" class="todo-list"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>HTML, CSS, JavaScript로 만든 간단한 웹페이지</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
