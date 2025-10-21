@@ -3,52 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>간단한 웹페이지</title>
-    <link rel="stylesheet" href="style.css">
+    <title>예진 - Product Manager Portfolio</title>
+    <meta name="description" content="사용자 중심의 가치를 만들어가는 프로덕트 매니저 포트폴리오">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>환영합니다!</h1>
-            <p class="subtitle">간단한 인터랙티브 웹페이지</p>
-        </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">예진</div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-        <main>
-            <section class="card">
-                <h2>카운터</h2>
-                <div class="counter-display" id="counter">0</div>
-                <div class="button-group">
-                    <button onclick="decrementCounter()" class="btn btn-secondary">-</button>
-                    <button onclick="resetCounter()" class="btn btn-secondary">초기화</button>
-                    <button onclick="incrementCounter()" class="btn btn-primary">+</button>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>안녕하세요, <span class="highlight">PM</span> 예진입니다</h1>
+                <p class="subtitle">사용자 중심의 가치를 만들어가는 프로덕트 매니저</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+                    <a href="#contact" class="btn btn-secondary">연락하기</a>
                 </div>
-            </section>
-
-            <section class="card">
-                <h2>배경색 변경</h2>
-                <div class="button-group">
-                    <button onclick="changeColor('lightblue')" class="btn color-btn" style="background-color: lightblue;">파랑</button>
-                    <button onclick="changeColor('lightcoral')" class="btn color-btn" style="background-color: lightcoral;">빨강</button>
-                    <button onclick="changeColor('lightgreen')" class="btn color-btn" style="background-color: lightgreen;">초록</button>
-                    <button onclick="changeColor('lightyellow')" class="btn color-btn" style="background-color: lightyellow;">노랑</button>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                    <span>Your Photo</span>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <section class="card">
-                <h2>간단한 할 일 목록</h2>
-                <div class="todo-input">
-                    <input type="text" id="todoInput" placeholder="할 일을 입력하세요" onkeypress="handleKeyPress(event)">
-                    <button onclick="addTodo()" class="btn btn-primary">추가</button>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>데이터 기반의 의사결정과 사용자 중심 사고를 통해 문제를 해결하는 PM입니다.</p>
+                    <p>복잡한 문제를 단순하게 만들고, 팀과 함께 최선의 솔루션을 찾아가는 과정을 즐깁니다. 사용자의 진짜 니즈를 파악하고, 이를 제품에 반영하여 실질적인 가치를 만들어내는 것이 저의 목표입니다.</p>
+                    <p>개발자, 디자이너와의 협업을 통해 아이디어를 현실로 구현하며, 지속적인 데이터 분석과 피드백을 통해 제품을 개선해 나갑니다.</p>
                 </div>
-                <ul id="todoList" class="todo-list"></ul>
-            </section>
-        </main>
+                <div class="about-skills">
+                    <div class="skill-category">
+                        <h3>Core Competencies</h3>
+                        <ul>
+                            <li>Product Strategy & Roadmap</li>
+                            <li>User Research & Analysis</li>
+                            <li>Data-Driven Decision Making</li>
+                            <li>Cross-functional Communication</li>
+                            <li>Agile & Sprint Planning</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <div class="tool-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Jira</span>
+                            <span class="tag">Google Analytics</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Notion</span>
+                            <span class="tag">Amplitude</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <p>HTML, CSS, JavaScript로 만든 간단한 웹페이지</p>
-        </footer>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">프로젝트 이미지</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">사용자 온보딩 개선 프로젝트</h3>
+                        <p class="project-meta">Product Manager | 2024.03 - 2024.05</p>
+                        <div class="project-brief">
+                            <div class="brief-item">
+                                <strong>Problem:</strong>
+                                <p>신규 사용자의 70%가 첫 주 내에 이탈하며, 핵심 기능 사용률이 낮은 문제 발견</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Solution:</strong>
+                                <p>사용자 인터뷰 및 데이터 분석을 통해 온보딩 플로우를 재설계하고, 단계별 가이드 및 툴팁을 추가하여 사용자 이해도 향상</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Impact:</strong>
+                                <p>7일 리텐션 35% 증가, 핵심 기능 사용률 48% 향상, 사용자 만족도 4.2/5.0 달성</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">User Research</span>
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <button class="btn-detail" data-project="1">상세보기</button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">프로젝트 이미지</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">검색 기능 고도화</h3>
+                        <p class="project-meta">Product Manager | 2024.01 - 2024.03</p>
+                        <div class="project-brief">
+                            <div class="brief-item">
+                                <strong>Problem:</strong>
+                                <p>사용자가 원하는 콘텐츠를 찾지 못해 검색 이탈률이 60%에 달함</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Solution:</strong>
+                                <p>검색 로그 분석 및 사용자 행동 패턴을 파악하여 자동완성, 추천 검색어, 필터링 기능을 도입</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Impact:</strong>
+                                <p>검색 성공률 42% 증가, 평균 체류 시간 2.3분 증가, 전환율 28% 향상</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">User Behavior Analysis</span>
+                            <span class="tag">Product Strategy</span>
+                        </div>
+                        <button class="btn-detail" data-project="2">상세보기</button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">프로젝트 이미지</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">커뮤니티 기능 신규 런칭</h3>
+                        <p class="project-meta">Product Manager | 2023.10 - 2024.01</p>
+                        <div class="project-brief">
+                            <div class="brief-item">
+                                <strong>Problem:</strong>
+                                <p>사용자 간 상호작용이 부족하여 플랫폼 활성도가 낮고, 재방문율이 저조함</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Solution:</strong>
+                                <p>사용자 니즈 조사를 통해 커뮤니티 기능의 우선순위를 설정하고, MVP를 빠르게 출시하여 피드백 기반 개선 진행</p>
+                            </div>
+                            <div class="brief-item">
+                                <strong>Impact:</strong>
+                                <p>MAU 10,000명 달성, 일평균 게시글 수 250개, 댓글 참여율 55%, DAU/MAU 비율 45% 기록</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">MVP Development</span>
+                            <span class="tag">User Interview</span>
+                            <span class="tag">Roadmap Planning</span>
+                        </div>
+                        <button class="btn-detail" data-project="3">상세보기</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- 동적으로 채워질 내용 -->
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">📊</div>
+                    <h3>Product Strategy</h3>
+                    <p>시장 분석, 로드맵 수립, OKR 설정을 통한 전략적 제품 기획</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">👥</div>
+                    <h3>User Research</h3>
+                    <p>인터뷰, 설문조사, 사용성 테스트를 통한 사용자 니즈 발굴</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📈</div>
+                    <h3>Data Analysis</h3>
+                    <p>SQL, GA4, Amplitude를 활용한 데이터 기반 의사결정</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>개발자, 디자이너와의 원활한 협업 및 커뮤니케이션</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Problem Solving</h3>
+                    <p>복잡한 문제를 구조화하고 실행 가능한 솔루션 도출</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Agile Methodology</h3>
+                    <p>스프린트 계획, 백로그 관리, 지속적인 제품 개선</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p>프로젝트나 협업 제안은 언제든 환영합니다!</p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">
+                        <span class="icon">✉️</span>
+                        your.email@example.com
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
+                        <span class="icon">💼</span>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/hiyejin" class="contact-link" target="_blank">
+                        <span class="icon">💻</span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 예진. All rights reserved.</p>
+            <p class="credit">Made with Claude Code</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
